@@ -4,7 +4,6 @@ import java.awt.*;
 
 /**
  * 常量类
- *@author jjd
  **/
 public final class WorkflowConstants {
 
