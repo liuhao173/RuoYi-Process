@@ -49,6 +49,20 @@ public class SysRoleController extends BaseController
         return prefix + "/role";
     }
 
+    @GetMapping("/allRole")
+    @ResponseBody
+    public List<SysRole> allRole(SysRole role)
+    {
+        return roleService.selectRoleList(role);
+    }
+
+    @GetMapping("/users/{roleId}")
+    @ResponseBody
+    public List<SysUser> allRole(@PathVariable("roleId") Long roleId)
+    {
+        return userService.selectUserListByRoleId(roleId);
+    }
+
     @RequiresPermissions("system:role:list")
     @PostMapping("/list")
     @ResponseBody

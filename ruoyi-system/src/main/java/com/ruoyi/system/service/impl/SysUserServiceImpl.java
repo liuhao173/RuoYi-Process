@@ -517,4 +517,9 @@ public class SysUserServiceImpl implements ISysUserService
     {
         return userMapper.updateUser(user);
     }
+
+    @Override
+    public List<SysUser> selectUserListByRoleId(Long roleId) {
+        return userMapper.selectUserListByRoleId(roleId);
+    }
 }
